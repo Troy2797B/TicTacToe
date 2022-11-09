@@ -93,7 +93,16 @@ public class Board {
                 else if (matrix[0][2] == 'O' && matrix[1][1] == 'O' && matrix[2][0] == 'O') {
                     winner = "O";
                     break;
+                } //UP DIAGONALS DONE
+                else if (matrix[0][0] == 'X' && matrix[1][1] == 'X' && matrix[2][2] == 'X') {
+                    winner = "X";
+                    break;
                 }
+                else if (matrix[0][0] == 'O' && matrix[1][1] == 'O' && matrix[2][2] == 'O') {
+                    winner = "O";
+                    break;
+                } else {winner = "";
+                break;}
             }
         }
         return winner;
