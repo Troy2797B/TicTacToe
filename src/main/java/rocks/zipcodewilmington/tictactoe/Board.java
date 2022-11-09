@@ -58,7 +58,42 @@ public class Board {
                 else if (matrix[0][2] == 'O' && matrix[1][2] == 'O' && matrix[2][2] == 'O') {
                     winner = "O";
                     break;
-                }//COLUMNS COMPLETELEY DONE
+                }//COLUMNS COMPLETELY DONE
+                if (matrix[0][0] == 'X' && matrix[0][1] == 'X' && matrix[0][2] == 'X'){
+                    winner ="X";
+                    break;
+                }
+                else if (matrix[0][0] == 'O' && matrix[0][1] == 'O' && matrix[0][2] == 'O') {
+                    winner = "O";
+                    break;
+                }
+                //first row wins for both done
+                else if (matrix[1][0] == 'X' && matrix[1][1] == 'X' && matrix[1][2] == 'X') {
+                    winner = "X";
+                    break;
+                }
+                else if (matrix[1][0] == 'O' && matrix[1][1] == 'O' && matrix[1][2] == 'O') {
+                    winner = "O";
+                    break;
+                }
+                //second row done
+                else if (matrix[2][0] == 'X' && matrix[2][1] == 'X' && matrix[2][2] == 'X') {
+                    winner = "X";
+                    break;
+                }
+
+                else if (matrix[2][0] == 'O' && matrix[2][1] == 'O' && matrix[2][2] == 'O') {
+                    winner = "O";
+                    break;
+                }//ROWS COMPLETELY DONE
+                else if (matrix[0][2] == 'X' && matrix[1][1] == 'X' && matrix[2][0] == 'X') {
+                    winner = "X";
+                    break;
+                }
+                else if (matrix[0][2] == 'O' && matrix[1][1] == 'O' && matrix[2][0] == 'O') {
+                    winner = "O";
+                    break;
+                }
             }
         }
         return winner;
